@@ -20,10 +20,10 @@ namespace Rekening
         public Spaarrekening(string rekeningNr, double saldo)
             : base (rekeningNr, saldo)
         {
-            
+            Percentage = 0.05;
         }
 
-        private void SchrijfRenteBij()
+        public void SchrijfRenteBij()
         {
             Saldo += Saldo * Percentage;
         }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Rekening
 {
@@ -29,21 +30,31 @@ namespace Rekening
         public double Saldo
         {
             get { return _saldo; }
-            set { _saldo = value; }
+            set {
+                if (value < Minimum)
+                {
+                    MessageBox.Show($"Invalid operation","Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    _saldo = value;
+                }
+            }
         }
 
         public Rekening(string rekeningNr, double saldo)
         {
             RekeningNr = rekeningNr;
             Saldo = saldo;
+            Minimum = 0;
         }
 
-        private void Storten(double bedrag)
+        public void Storten(double bedrag)
         {
             Saldo += bedrag;
         }
 
-        private void Afhalen(double bedrag)
+        public void Afhalen(double bedrag)
         {
             Saldo -= bedrag;
         }
