@@ -1,0 +1,38 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Rekening
+{
+    public class Spaarrekening : Rekening
+    {
+        private double _percentage;
+
+        public double Percentage
+        {
+            get { return _percentage; }
+            set { _percentage = value; }
+        }
+
+
+        public Spaarrekening(string rekeningNr, double saldo)
+            : base (rekeningNr, saldo)
+        {
+            
+        }
+
+        private void SchrijfRenteBij()
+        {
+            Saldo += Saldo * Percentage;
+        }
+
+        public override string ToString()
+        {
+           string percentage = $"(percentage {Percentage})";
+           return base.ToString()  + " " + percentage;
+        }
+
+    }
+}
