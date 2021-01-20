@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rekening", "Rekening\Rekeni
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Animals", "Animals\Animals.csproj", "{45F8CCE6-769B-4E43-B963-69A95E26B0CC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cilinder", "Cilinder\Cilinder.csproj", "{C98ABA2F-C865-4338-A53F-60C2B1C31BDC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45F8CCE6-769B-4E43-B963-69A95E26B0CC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45F8CCE6-769B-4E43-B963-69A95E26B0CC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45F8CCE6-769B-4E43-B963-69A95E26B0CC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C98ABA2F-C865-4338-A53F-60C2B1C31BDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C98ABA2F-C865-4338-A53F-60C2B1C31BDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C98ABA2F-C865-4338-A53F-60C2B1C31BDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C98ABA2F-C865-4338-A53F-60C2B1C31BDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

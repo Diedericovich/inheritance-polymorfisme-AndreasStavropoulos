@@ -23,14 +23,19 @@
 
                 case "Are you hungry?":
                     return "Very! I could eat a cow.";
+
                 case "What's your name?":
                     return $"My name is {Name}";
+
                 case "How much is 10 + 12?":
                     return "22!";
+
                 case "Which colour is your hair?":
                     return "Brown";
+
                 case "Do you have hair?":
                     return "Nope.";
+
                 default:
                     return "Whatever, man...";
             }
