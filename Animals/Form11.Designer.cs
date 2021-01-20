@@ -41,7 +41,7 @@ namespace Animals
             this.btnPet = new System.Windows.Forms.Button();
             this.btnEat = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ListBox();
             this.grpBoxAnimals.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,7 @@ namespace Animals
             this.radBtnHuman.TabStop = true;
             this.radBtnHuman.Text = "Human";
             this.radBtnHuman.UseVisualStyleBackColor = true;
+            this.radBtnHuman.CheckedChanged += new System.EventHandler(this.radBtnHuman_CheckedChanged);
             // 
             // radBtnParrot
             // 
@@ -78,6 +79,7 @@ namespace Animals
             this.radBtnParrot.TabStop = true;
             this.radBtnParrot.Text = "Parrot";
             this.radBtnParrot.UseVisualStyleBackColor = true;
+            this.radBtnParrot.CheckedChanged += new System.EventHandler(this.radBtnParrot_CheckedChanged);
             // 
             // radBtnCat
             // 
@@ -89,6 +91,7 @@ namespace Animals
             this.radBtnCat.TabStop = true;
             this.radBtnCat.Text = "Cat";
             this.radBtnCat.UseVisualStyleBackColor = true;
+            this.radBtnCat.CheckedChanged += new System.EventHandler(this.radBtnCat_CheckedChanged);
             // 
             // label1
             // 
@@ -168,15 +171,20 @@ namespace Animals
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.ItemHeight = 24;
             this.comboBox1.Items.AddRange(new object[] {
             "Hello",
             "How are you today?",
-            "Are you hungry?"});
-            this.comboBox1.Location = new System.Drawing.Point(46, 355);
+            "Are you hungry?",
+            "What\'s your name?",
+            "How much is 10 + 12?",
+            "Which colour is your hair?",
+            "Do you have hair?"});
+            this.comboBox1.Location = new System.Drawing.Point(46, 420);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(208, 32);
-            this.comboBox1.TabIndex = 11;
-            this.comboBox1.Text = "Choose a sentence";
+            this.comboBox1.ScrollAlwaysVisible = true;
+            this.comboBox1.Size = new System.Drawing.Size(218, 100);
+            this.comboBox1.TabIndex = 12;
             // 
             // Form1
             // 
@@ -216,7 +224,7 @@ namespace Animals
         private System.Windows.Forms.Button btnPet;
         private System.Windows.Forms.Button btnEat;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ListBox comboBox1;
     }
 }
 

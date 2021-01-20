@@ -37,8 +37,19 @@ namespace Animals
 
         private void btnTalk_Click(object sender, EventArgs e)
         {
-            string sentence = comboBox1.SelectedItem.ToString();
-            MessageBox.Show(animal.Talk(sentence));
+            if (comboBox1.SelectedItem == null)
+            {
+                MessageBox.Show("Select a sentence");
+            }
+            else if (animal == null)
+            {
+                MessageBox.Show("Create a new animal");
+            }
+            else
+            {
+                string sentence = comboBox1.SelectedItem.ToString();
+                MessageBox.Show(animal.Talk(sentence)); 
+            }
         }
 
         private void btnPet_Click(object sender, EventArgs e)
@@ -54,6 +65,21 @@ namespace Animals
         private void btnClose_Click(object sender, EventArgs e)
         {
               Application.Exit();
+        }
+
+        private void radBtnCat_CheckedChanged(object sender, EventArgs e)
+        {
+            animal = null;
+        }
+
+        private void radBtnParrot_CheckedChanged(object sender, EventArgs e)
+        {
+            animal = null;
+        }
+
+        private void radBtnHuman_CheckedChanged(object sender, EventArgs e)
+        {
+            animal = null;
         }
     }
 }
