@@ -1,22 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Animals
+﻿namespace Animals
 {
-    class Cat : Animal
-    { 
+    internal class Cat : Animal
+    {
         private int _times;
 
         public Cat(string name) : base(name)
         {
         }
+
         public override string Talk(string sentence)
         {
             _times++;
-            if ((_times  %  3) == 0)
+            if ((_times % 3) == 0)
             {
                 return "Miaooow!";
             }
@@ -30,6 +25,5 @@ namespace Animals
         {
             return "RrrRrr!";
         }
-
     }
 }

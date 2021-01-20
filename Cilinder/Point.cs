@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Cilinder
+﻿namespace Cilinder
 {
     public class Point
     {
-
         private double _x;
 
         public double X
@@ -25,9 +18,8 @@ namespace Cilinder
             set { _y = value; }
         }
 
-        public Point() 
+        public Point()
         {
-
         }
 
         public Point(double x, double y)
@@ -36,15 +28,9 @@ namespace Cilinder
             Y = y;
         }
 
-
         public virtual string Data()
         {
             return $"({X},{Y})";
         }
-
-        
-        
-
-
     }
 }

@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Animals
@@ -13,6 +6,7 @@ namespace Animals
     public partial class Form1 : Form
     {
         public Animal animal;
+
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +26,6 @@ namespace Animals
             {
                 animal = new Human(txtBoxName.Text);
             }
-
         }
 
         private void btnTalk_Click(object sender, EventArgs e)
@@ -48,7 +41,7 @@ namespace Animals
             else
             {
                 string sentence = comboBox1.SelectedItem.ToString();
-                MessageBox.Show(animal.Talk(sentence)); 
+                MessageBox.Show(animal.Talk(sentence));
             }
         }
 
@@ -64,7 +57,7 @@ namespace Animals
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-              Application.Exit();
+            Application.Exit();
         }
 
         private void radBtnCat_CheckedChanged(object sender, EventArgs e)
