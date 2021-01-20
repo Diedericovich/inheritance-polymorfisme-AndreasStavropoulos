@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Rekening
+﻿namespace Rekening
 {
     public class Spaarrekening : Rekening
     {
@@ -16,9 +10,8 @@ namespace Rekening
             set { _percentage = value; }
         }
 
-
         public Spaarrekening(string rekeningNr, double saldo)
-            : base (rekeningNr, saldo)
+            : base(rekeningNr, saldo)
         {
             Percentage = 0.05;
         }
@@ -30,9 +23,8 @@ namespace Rekening
 
         public override string ToString()
         {
-           string percentage = $"(percentage {Percentage})";
-           return base.ToString()  + " " + percentage;
+            string percentage = $"(percentage {Percentage})";
+            return base.ToString() + " " + percentage;
         }
-
     }
 }

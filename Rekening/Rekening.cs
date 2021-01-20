@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Rekening
 {
@@ -26,14 +21,15 @@ namespace Rekening
         }
 
         private double _saldo;
-                
+
         public double Saldo
         {
             get { return _saldo; }
-            set {
+            set
+            {
                 if (value < Minimum)
                 {
-                    MessageBox.Show($"Invalid operation","Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show($"Invalid operation", "Error:", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
@@ -63,7 +59,5 @@ namespace Rekening
         {
             return $"Rekeningnummer {RekeningNr} met saldo {Saldo}";
         }
-
-
     }
 }

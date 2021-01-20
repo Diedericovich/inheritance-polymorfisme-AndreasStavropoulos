@@ -1,21 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Rekening
 {
     public partial class Form1 : Form
     {
-
-        Rekening rekening = new Rekening("BE123", 25000);
-        Spaarrekening spaarrekening = new Spaarrekening("BES123", 100);
-        Zichtrekening zichtrekening = new Zichtrekening("BEZ123", 0);
+        private Rekening rekening = new Rekening("BE123", 25000);
+        private Spaarrekening spaarrekening = new Spaarrekening("BES123", 100);
+        private Zichtrekening zichtrekening = new Zichtrekening("BEZ123", 0);
 
         public Form1()
         {
@@ -55,13 +47,13 @@ namespace Rekening
             DecreaseAmount(txtZichtrekening.Text, lblZicht, zichtrekening);
         }
 
-
-        public void AddAmount(string textbox, Label label, Rekening rekening )
+        public void AddAmount(string textbox, Label label, Rekening rekening)
         {
             double amount = Convert.ToDouble(textbox);
             rekening.Storten(amount);
             label.Text = rekening.ToString();
         }
+
         public void DecreaseAmount(string textbox, Label label, Rekening rekening)
         {
             double amount = Convert.ToDouble(textbox);
